@@ -1,0 +1,55 @@
+.wrapperMessage {
+    display: flex;
+    margin: 2rem 0;
+}
+
+.wrapperMessage > img {
+    width: 40px;
+    height: 40px;
+    align-self: flex-end;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 0 10px;
+}
+
+.message {
+    display: flex;
+    background-color: khaki;
+    border-radius: 10px;
+    padding: 0 10px;
+    max-width: 350px;
+    position: relative;
+}
+
+.message::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -8px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 0 solid transparent;
+    border-right: 18px solid khaki;
+}
+
+.messageInner {
+    width: 100%;
+    margin-right: 10px;
+}
+
+.messageInner > h4 {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.messageInner > p {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.time {
+    align-self: flex-end;
+    margin-bottom: 5px;
+}
