@@ -1,7 +1,42 @@
-.someClass {
+.wrapper input {
+    border: none;
+    margin: 0 1rem;
+    background: #F6FFEE;
+}
 
+.wrapper button {
+    border: none;
+    background: #F6FFEE;
+    margin: 0 .4rem;
+}
+
+.wrapper button:hover {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
+.wrapper div {
+    margin-left: 1rem;
+    color: red;
+}
+
+.wrapper span {
+    margin-left: 2rem;
+}
+
+.someClass {
+    border-bottom: 2px black solid !important;
+}
+
+.someClass:focus {
+    outline: none;
 }
 
 .error {
-    border: 1px solid red;
+    border-bottom: 2px red solid !important;
+}
+
+.error:focus {
+    outline: none;
 }
