@@ -1,0 +1,25 @@
+label {
+    display: flex;
+}
+
+.checkbox {
+    appearance: none; /*- Убирает стандартный внешний вид чекбокса, оставляя функциональность -*/
+
+    width: .9rem;
+    height: .9rem;
+    border-radius: 100%;
+    border: 1px solid deeppink;
+    padding: 0;
+    /*margin-top: .3rem;*/
+}
+
+.checkbox:checked {
+    background: url("./icon/checked.svg") no-repeat center;
+    border: none;
+}
+
+
+.checked {
+    opacity: .4;
+    text-decoration: line-through;
+}

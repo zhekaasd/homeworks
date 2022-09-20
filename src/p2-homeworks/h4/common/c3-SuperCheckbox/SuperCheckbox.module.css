@@ -5,3 +5,8 @@
 .spanClassName {
 
 }
+
+.test {
+    opacity: .4;
+    text-decoration: line-through;
+}

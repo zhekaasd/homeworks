@@ -1,3 +1,7 @@
 .someClass {
 
 }
+
+.active {
+    background-color: blueviolet;
+}

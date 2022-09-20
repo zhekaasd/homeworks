@@ -1,0 +1,41 @@
+import React from 'react'
+import {Navigate, Route, Routes} from 'react-router-dom'
+import Error404 from '../../pages/Error/Error404';
+import PreJunior from "../../pages/PreJunior";
+import JuniorPlus from "../../pages/JuniorPlus";
+import Junior from "../../pages/Junior";
+
+import s from "./RoutesComponent.module.css";
+
+
+export const PATH = {
+    PRE_JUNIOR: '/pre-junior',
+    JUNIOR: '/main-junior',
+    JUNIOR_PLUS: '/junior-plus',
+    // add paths
+};
+
+
+function RoutesComponent(props: {isTrue: boolean}) {
+    return (
+        <div className={props.isTrue ? s.content : s.hideContent}>
+            {/*Routes выбирает первый подходящий роут*/}
+            <Routes>
+
+                в начале мы попадаем на страницу '/' и переходим сразу на страницу PRE_JUNIOR
+                <Route path={'/'} element={<Navigate to={PATH.PRE_JUNIOR}/>}/>
+
+                <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
+                <Route path={PATH.JUNIOR} element={<Junior/>}/>
+                <Route path={PATH.JUNIOR_PLUS} element={<JuniorPlus/>}/>
+                // add routes
+
+                он отрисуется если пользователь захочет попасть на несуществующую страницу
+                <Route path={'/*'} element={<Error404/>}/>
+
+            </Routes>
+        </div>
+    )
+}
+
+export default RoutesComponent

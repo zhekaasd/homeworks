@@ -1,0 +1,59 @@
+
+.default {
+    background: #424144;
+    color: #fafaff;
+    font-weight: bold;
+    border: 0 none;
+    border-radius: .2rem;
+    cursor: pointer;
+    padding: .2rem 1rem;
+    /*margin: .2rem 1.4rem;*/
+    margin: 0 .1rem;
+    /*width: 100%;*/
+}
+
+.default:hover {
+    background: black;
+}
+
+
+
+.text {
+    background: none;
+    color: #595959;
+    font-weight: bold;
+    border-radius: .4rem;
+    cursor: pointer;
+    padding: .6rem 1.4rem;
+    margin: .6rem 1.4rem;
+    border: 1px solid transparent;
+}
+
+.text:hover {
+    background: #e2e2e2;
+}
+
+.remove {
+    background: #9f2121;
+    color: #fafaff;
+    font-weight: bold;
+    border: 0 none;
+    border-radius: .2rem;
+    cursor: pointer;
+    padding: .2rem 1rem;
+    /*margin: .2rem 1.4rem;*/
+    margin: 0 .1rem;
+}
+
+.remove:hover {
+    background: #672727;
+}
+
+
+.default:disabled {
+    pointer-events: none;
+    opacity: .6;
+}
+
+
+

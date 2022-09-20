@@ -1,5 +1,6 @@
 import React from 'react'
 import {AffairType} from "./HW2";
+import AlternativeSuperButton from "../h4/common/c2-SuperButton/Alternative/AlternativeSuperButton";
 
 type AffairPropsType = {
     // key не нужно типизировать
@@ -14,8 +15,8 @@ function Affair(props: AffairPropsType) {
 
     return (
         <div>
-            <span>{props.affair.name} - {props.affair.priority}</span>
-            <button onClick={deleteCallback}>X</button>
+            <span style={{display: "inline-block", marginBottom: '10px'}}>{props.affair.name} - {props.affair.priority}</span>
+            <AlternativeSuperButton remove onClick={deleteCallback}>X</AlternativeSuperButton>
         </div>
     )
 }

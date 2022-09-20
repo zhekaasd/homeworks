@@ -1,0 +1,35 @@
+.header {
+    background-color: #282c34;
+    height: 100px;
+    color: white;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100vw - (100vw - 100%));
+    z-index: 3;
+    padding: 40px;
+}
+
+.header > div > h3 {
+    font-size: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+}
+
+.header > div > h3 > span {
+    color: #0772e3;
+}
+
+.btn {
+    padding: .4rem 1rem !important;
+    background-color: #0772e3 !important;
+    color: white !important;
+    font-weight: 500 !important;
+    font-size: 1rem !important;
+}
+
+.btn:hover {
+    background-color: #5faafd !important;
+}

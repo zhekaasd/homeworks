@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Affairs from './Affairs'
-import AlternativeAffairs from './AlternativeAffairs';
+import AlternativeAffairs from './AlternativeAffairs/AlternativeAffairs';
 
 // types
 export type AffairPriorityType = 'high' | 'low' | 'middle';
@@ -15,10 +15,10 @@ export type FilterType = 'all' | AffairPriorityType
 const defaultAffairs: AffairType[] = [ // need to fix any
     {_id: 1, name: 'React', priority: 'high'},
     {_id: 2, name: 'anime', priority: 'low'},
-    {_id: 3, name: 'games', priority: 'low'},
+    {_id: 3, name: 'games ', priority: 'low'},
     {_id: 4, name: 'work', priority: 'high'},
     {_id: 5, name: 'html & css', priority: 'middle'},
-]
+];
 
 // pure helper functions
 export const filterAffairs = (affairs: AffairType[], filter: FilterType): AffairType[] => { // need to fix any
@@ -45,6 +45,7 @@ function HW2() {
 
             {/*should work (должно работать)*/}
             <Affairs
+                filter={filter}
                 data={filteredAffairs}
                 setFilter={setFilter}
                 deleteAffairCallback={deleteAffairCallback}

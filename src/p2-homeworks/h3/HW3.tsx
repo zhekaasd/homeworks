@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import AlternativeGreeting from './AlternativeGreeting'
 import GreetingContainer from './GreetingContainer'
 
 // types
@@ -25,7 +26,7 @@ function HW3() {
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeGreeting/>*/}
+            <AlternativeGreeting />
             <hr/>
         </div>
     )

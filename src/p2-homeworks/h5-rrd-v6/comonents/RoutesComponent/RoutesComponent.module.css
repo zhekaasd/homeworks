@@ -1,0 +1,17 @@
+.hideContent {
+    margin-left: 70px;
+    transition: .4s;
+}
+
+.hideContent > div {
+    margin-left: .4rem;
+}
+
+.content {
+    margin-left: 260px;
+    transition: .4s;
+}
+
+.content > div {
+    margin-left: .4rem;
+}

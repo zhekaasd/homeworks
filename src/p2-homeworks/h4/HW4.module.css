@@ -1,5 +1,6 @@
 .blue {
-    border-bottom: 5px solid blue;
+    border: 5px solid blue;
+    background: goldenrod;
 }
 
 .column {
@@ -10,4 +11,11 @@
 
 .testSpanError {
     color: blue;
+}
+
+
+.asd {
+    font-size: 3rem;
+    font-weight: 700;
+    color: deeppink;
 }

@@ -1,0 +1,51 @@
+
+
+.wrapper {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.input {
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    /*width: 100%;*/
+    box-sizing: border-box;
+    border-radius: .4rem;
+    color: #2C3E50;
+    font-size: 14px;
+}
+
+
+.input:focus {
+    border: 1px solid black;
+    outline-width: 0;
+    transition: All 0.5s ease-in;
+}
+
+.error {
+    display: block;
+    color: darkred;
+    font-weight: 700;
+    height: 1.2rem;
+    text-align: center;
+}
+
+
+
+.errorInput {
+    padding: 15px;
+    border: 1px solid darkred;
+    margin-bottom: 10px;
+    /*width: 100%;*/
+    box-sizing: border-box;
+    border-radius: .4rem;
+    color: #2C3E50;
+    font-size: 14px;
+}
+
+.errorInput:focus {
+    border: 1px solid darkred;
+    outline-width: 0;
+    transition: All 0.5s ease-in;
+}
