@@ -1,6 +1,6 @@
 import React from 'react'
 import {AffairType, FilterType} from "../HW2";
-import styles from "./AlternativeAffair.module.css";
+import s from "./AlternativeAffair.module.css";
 import iconDelete from './images/trash-solid.svg';
 
 type AffairPropsType = {
@@ -15,14 +15,14 @@ function Affair(props: AffairPropsType) {
     }
 
     function setClass(priority: FilterType) {
-        return styles.affair + (props.affair.priority === priority ? ' ' + styles[priority] : '')
+        return s.affair + (props.affair.priority === priority ? ' ' + s[priority] : '')
     }
 
 
-    return <div className={styles.affair + ' ' + setClass(props.affair.priority)}>
-            <span className={styles.title}>{props.affair.name.toUpperCase()}</span>
-            <div className={styles.removeIcon}>
-                <img onClick={deleteCallback} className={styles.icon} src={iconDelete} alt=""/>
+    return <div className={s.affair + ' ' + setClass(props.affair.priority)}>
+            <span className={s.title}>{props.affair.name.toUpperCase()}</span>
+            <div className={s.removeIcon}>
+                <img onClick={deleteCallback} className={s.icon} src={iconDelete} alt=""/>
             </div>
         </div>
 }

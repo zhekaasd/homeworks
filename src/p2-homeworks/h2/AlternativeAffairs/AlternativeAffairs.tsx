@@ -1,6 +1,6 @@
 import React from 'react'
 import {AffairType, FilterType} from "../HW2";
-import styles from "./AlternativeAffairs.module.css";
+import s from "./AlternativeAffairs.module.css";
 import AlternativeAffair from "./AlternativeAffair";
 
 type AlternativeAffairsType = {
@@ -18,10 +18,10 @@ function AlternativeAffairs(props: AlternativeAffairsType) {
     }
 
     const setClass = (filter: FilterType) => {
-        return styles.btn + (props.filter === filter ? ' ' + styles[filter] : '');
+        return s.btn + (props.filter === filter ? ' ' + s[filter] : '');
     }
 
-    return <div className={styles.wrapper}>
+    return <div className={s.wrapper}>
         {
             props.data.map((a: AffairType) => <AlternativeAffair // should work
                     key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
@@ -30,11 +30,11 @@ function AlternativeAffairs(props: AlternativeAffairsType) {
                 />)
         }
 
-        <div className={styles.sortButton}>
+        <div className={s.sortButton}>
             <button className={setClass('all')} onClick={setPriority} value={'all'} >All</button>
-            <button className={ styles.hoverHigh + ' ' + setClass('high') } onClick={setPriority} value={'high'} >High</button>
-            <button className={ styles.hoverMiddle + ' ' + setClass('middle')} onClick={setPriority} value={'middle'} >Middle</button>
-            <button className={ styles.hoverLow + ' ' + setClass('low')} onClick={setPriority} value={'low'} >Low</button>
+            <button className={ s.hoverHigh + ' ' + setClass('high') } onClick={setPriority} value={'high'} >High</button>
+            <button className={ s.hoverMiddle + ' ' + setClass('middle')} onClick={setPriority} value={'middle'} >Middle</button>
+            <button className={ s.hoverLow + ' ' + setClass('low')} onClick={setPriority} value={'low'} >Low</button>
         </div>
     </div>
 }

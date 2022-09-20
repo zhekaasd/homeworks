@@ -14,10 +14,19 @@ function Sidebar({isTrue, changeIsTrue, data}: SidebarPropsType) {
        return path ? s.active : '';
     }
 
+    const onMouseHandler = (value: boolean) => {
+        changeIsTrue(!value)
+    }
+
     return (
-        <div className={ isTrue ?  s.sidebar : s.sidebarClosed}>
+        <div
+            onMouseOver={() => onMouseHandler(isTrue)}
+            onMouseOut={() => onMouseHandler(isTrue)}
+            className={ isTrue ?  s.sidebar : s.sidebarClosed}
+        >
             {
                 data.map((item) => <NavLink
+
                     key={item.id}
                     className={({isActive}) => s.navItem + ' ' + setClass(isActive)}
                     to={item.path}
