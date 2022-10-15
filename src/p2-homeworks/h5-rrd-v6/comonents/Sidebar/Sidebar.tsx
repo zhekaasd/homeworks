@@ -10,18 +10,16 @@ type SidebarPropsType = {
 function Sidebar({isTrue, changeIsTrue, data}: SidebarPropsType) {
 
 
-    const setClass = (path: boolean) => {
-       return path ? s.active : '';
-    }
 
-    const onMouseHandler = (value: boolean) => {
-        changeIsTrue(!value)
+    const setClass = (path: boolean) => {
+        console.log(path);
+       return path ? s.active : '';
     }
 
     return (
         <div
-            onMouseOver={() => onMouseHandler(isTrue)}
-            onMouseOut={() => onMouseHandler(isTrue)}
+            onMouseEnter={() => changeIsTrue(!isTrue)}
+            onMouseLeave={() => changeIsTrue(!isTrue)}
             className={ isTrue ?  s.sidebar : s.sidebarClosed}
         >
             {
@@ -29,6 +27,7 @@ function Sidebar({isTrue, changeIsTrue, data}: SidebarPropsType) {
 
                     key={item.id}
                     className={({isActive}) => s.navItem + ' ' + setClass(isActive)}
+
                     to={item.path}
                 >
                     <img src={item.icon} alt=""/>

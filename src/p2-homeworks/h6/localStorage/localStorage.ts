@@ -13,6 +13,13 @@ export function restoreState<T>(key: string, defaultState: T) {
     return state
 }
 
+// clear localstorage
+
+export function clearKey<T>(key: string, defaultValue: T) {
+    localStorage.removeItem(key);
+    return defaultValue;
+}
+
 // ---------------------------------------------------------------------------------------------------------------
 // пример использования:
 type StateType = {

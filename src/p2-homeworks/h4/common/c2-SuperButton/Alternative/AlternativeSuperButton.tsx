@@ -26,4 +26,4 @@ const AlternativeSuperButton: React.FC<AlternativeSuperButtonPropsType> = (
     )
 }
 
-export default AlternativeSuperButton
+export default AlternativeSuperButton;

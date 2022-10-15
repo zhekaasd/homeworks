@@ -1,17 +1,33 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import SuperEditableSpan from './common/c4-SuperEditableSpan/SuperEditableSpan'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
-import {restoreState, saveState} from './localStorage/localStorage'
+import {clearKey, restoreState, saveState} from './localStorage/localStorage'
+
+
+const EDITABLE_SPAN_VALUE = 'editable-span-value';
 
 function HW6() {
     const [value, setValue] = useState<string>('')
 
+    useEffect(() => {
+        setValue(restoreState(EDITABLE_SPAN_VALUE, ''));
+    }, [])
+
     const save = () => {
-        saveState<string>('editable-span-value', value)
+        saveState<string>(EDITABLE_SPAN_VALUE, value)
     }
     const restore = () => {
         // setValue()
+        let item  = restoreState(EDITABLE_SPAN_VALUE, '');
+        setValue(item);
     }
+
+    const clear = () => {
+        let item = clearKey(EDITABLE_SPAN_VALUE, '');
+        setValue(item);
+    }
+
+    console.log(value)
 
     return (
         <div>
@@ -28,6 +44,7 @@ function HW6() {
             </div>
             <SuperButton onClick={save}>save</SuperButton>
             <SuperButton onClick={restore}>restore</SuperButton>
+            <SuperButton onClick={clear}>clear</SuperButton>
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
